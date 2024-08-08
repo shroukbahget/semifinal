@@ -6,10 +6,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Comfortaa", sans-serif , "Baloo+Bhaina" , "Poppins";
+    font-family: "Comfortaa", sans-serif ;
+}
+@font-face {
+    font-family: Chalkboard SE;
+    src: url(../assets/fonts/ChalkboardSE-Regular.ttf);
 }
 body{
- background:#ffff;
+ background:#ffffff9d;
 }
 html{
     overflow-x:hidden ;
@@ -75,6 +79,7 @@ color: white;
     text-decoration: none;
     color: #000000;
     margin: 1.5rem;
+
 }
 .search {
   display: flex;
@@ -157,9 +162,10 @@ cursor: pointer;
     font-weight: 400;
     line-height: 136.53px;
     font-size: 67.86px;
-    font-family: Baloo Bhaina;
+    /* font-family: Baloo Bhaina; */
     margin-bottom: 0.5rem;
     text-shadow:2px 2px #fff;
+    font-family: Chalkboard SE;
 }
 .hero-section .hero-section-contienar .hero-banner p{
    font-size: 20px;
@@ -277,7 +283,7 @@ cursor: pointer;
     gap: 8px;
 }
 .product-continer .product-info .product-add h6{
-/* font-family: Chalkboard SE; */
+font-family: Chalkboard SE;
 font-size: 34px;
 font-weight: 700;
 line-height: 45.6px;
@@ -436,25 +442,30 @@ height: 338px;
     background: url(../assets/images/8f55155e9fc1c3f9e6852bc30a18586b.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 610px;
     height: 338px;
-    top: 2785px;
-    left: 100px;
+    /* top: 2785px;
+    left: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.banner-item1 p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform :translate(-50% , -50%) ;
 }
 .banner .banner-section .banner-item .banner-item2{
     background: url(../assets/images/b8bbe162327a7a85b43c1bb61fa6ce6b.png);
     background-size:cover;
     background-repeat: no-repeat;
-    width: 610px;
     height: 338px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .banner .banner-section .banner-item .banner-item2 .banner-item-info{
-    width: 331px;
-    height: 175px;
-    top: 2847.16px;
-    left: 971px;
-    gap: 32px; 
-    position: absolute;
     text-align: center;
 }
 .banner .banner-section .banner-item .banner-item2 .banner-item-info h2{
@@ -590,17 +601,19 @@ color:#1BBF00 ;
 /* end product-love */
 
 /* start photoshoots  */
-.photoshoots .photoshoots-section{
+/* .photoshoots .photoshoots-section{
     width: 1440px;
     height: 600px;
-}
+} */
 .photoshoots .photoshoots-section .recent-photoshoots{
-    width:340px;
-    height:60px;
-    margin-left: auto;
-    margin-right: auto;
+    
     /* padding-bottom: 50px; */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 .photoshoots .photoshoots-section .recent-photoshoots h4{
     font-family: Chalkboard SE;
@@ -622,7 +635,7 @@ color:#1BBF00 ;
    margin-top: 100px;
 }
 .photoshoots .photoshoots-section .photoshoots-continer .images img{
-    width: 360px; 
+    width: 100%; 
     height: 360px;
     object-fit:cover;
     background-size: cover;
@@ -788,33 +801,24 @@ color: #2D2D2D;
 /* start footer */
 .footer .footer-section {
     background-image: url(../assets/images/8bde43e7711690d8f6c15d14a44e6d4e.png);
-    width: 1440px;
-    height: 566px;
-    padding: 134px 520px 225.87px 99px;
     gap: 10px;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-block: 2rem;
+  
 }
 .footer .footer-section .news-continer{
-    width: 21px;
-    height: 206.13px;
-    padding-top: 90px;
-    gap: 80px;  
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.6fr 0.3fr 0.3fr;
 }
 .footer .footer-section .news-continer .logo-footer{
-    width:250px;
-    height:206.13px;
-    gap: 32px;
-    opacity: 0px;
+    width:10rem;
+    height:10rem;
 }
 .footer .footer-section .news-continer .logo-footer .logoo img{
-    width: 215px;
-    height: 79.13px;
-    gap: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .footer .footer-section .news-continer .logo-footer h6{
 font-family: Comfortaa;
@@ -823,6 +827,7 @@ font-weight: 350;
 line-height: 22.4px;
 text-align: left;
 color: #2D2D2D;
+
 }
 .footer .footer-section .news-continer .logo-footer .icons{
     width:188px;
